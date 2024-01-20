@@ -1,0 +1,75 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "prettier"
+  ],
+  "globals": {
+    "DEV": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "@typescript-eslint/ban-ts-comment": "warn",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "react/require-default-props": "off",
+    "react/function-component-definition": "off",
+    "@typescript-eslint/no-unused-expressions": "warn",
+    "no-unused-expressions": "warn",
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-useless-constructor": "error",
+    "import/extensions": "off",
+    "react/react-in-jsx-scope": "off",
+    "camelcase": "off",
+    "react/jsx-key": "error",
+    "default-param-last": "off",
+    "import/prefer-default-export": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "import/no-anonymous-default-export": [
+      "warn",
+      {
+        "allowArray": false,
+        "allowArrowFunction": false,
+        "allowAnonymousClass": false,
+        "allowAnonymousFunction": false,
+        "allowCallExpression": true, // The true value here is for backward compatibility
+        "allowLiteral": false,
+        "allowObject": true
+      }
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ],
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": ["Link"],
+        "specialLink": ["to", "hrefLeft", "hrefRight"],
+        "aspects": ["invalidHref", "preferButton"]
+      }
+    ],
+    "no-console": "warn",
+    "prettier/prettier": "error",
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    ],
+    "react/prop-types": "warn",
+    "react/jsx-props-no-spreading": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {},
+      "webpack": {},
+      "node": {}
+    }
+  },
+  "root": true,
+  "plugins": ["@typescript-eslint", "prettier"]
+}
